@@ -1,0 +1,23 @@
+<h1>Listado</h1>
+
+<button (click)="eliminaHeroe()">eliminar</button>
+<ul>
+    <li *ngIf=" hborrado;  else noBorrado"><!--angular reonoce que es un string vacio por la tanto ya deduce y concluye que no cumple -->
+        
+        <h2>Heroes borrados:  <small>{{ hborrado }}</small></h2>
+    </li>
+    
+        <ng-template #noBorrado>
+            <h3>No borrado</h3>
+        </ng-template>
+         
+    
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{ i+1 }} -- {{ heroe }}
+    </li  >
+    
+    
+    
+    
+</ul>
+
